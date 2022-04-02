@@ -14,15 +14,11 @@
 
 
 /*
- *
  * What I did this commit ?
- * I found that using flex-box would be really powerful thing
- * as I will not even be required to use other layouts
- * For the main website I can use flex-direction as column
- * and for the containers within, I can use the flex-direction as row
- * for example: If I had to show some gallery items from left to right
- * in such a way that they do not overflow, I can just use them insead
- *
+ * This code will center your children inside a flex container
+ * REMEMBER: I am defining properties of the container, not the 
+ * items themselves, that is I tell a flex container to do stuff
+ * not the children themselves
  * */
 
 .container {
@@ -31,8 +27,11 @@
   /* Do not remove any code from line above */
   display: flex;
   /* flex-direction: row; /1* alpha *1/ */
-  /* flex-direction: row-reverse; */ 
+  flex-direction: row-reverse; 
   /* flex-direction: column; */ 
-  flex-direction: column-reverse; 
+  /* flex-direction: column-reverse; */ 
   /* float: right; /1* Moves the whole container to right instead of its children *1/ */
+  /* justify-content: flex-start; /1* alpha *1/ */
+  /* justify-content: flex-end; */
+  justify-content: center; /* Centers children horizontally in a flex container*/
 }
