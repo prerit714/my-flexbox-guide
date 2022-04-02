@@ -17,7 +17,7 @@
 
 /*
  * What I did this commit ?
- * All the possible values for the align items
+ * Different ways to wrap your items inside the flex-container
  * */
 
 .container {
@@ -32,26 +32,25 @@
   /* flex-direction: column; */ 
   /* flex-direction: column-reverse; */ 
   /* float: right; /1* Moves the whole container to right instead of its children *1/ */
-  /* justify-content: flex-start; /1* alpha *1/ */
+  justify-content: flex-start; /* alpha */
   /* justify-content: flex-end; */
   /* justify-content: space-around; */
-  justify-content: space-between; /* ( along the main axis )Removes the spaces between the start and at the end */
+  /* justify-content: space-between; /1* ( along the main axis )Removes the spaces between the start and at the end *1/ */
   /* align-items: strech; /1* alpha *1/ */
   /* align-items: flex-end; /1* below the x axis *1/ */
   align-items: flex-start; /* above the x axis */
   /* align-items: baseline; /1* along the x axis *1/ */
-}
-
-.container div {
-  float: right;
+  /* flex-wrap: nowrap; /1* alpha *1/ */
+  flex-wrap: wrap;
+  /* flex-wrap: wrap-reverse; */
 }
 
 /* .container div:nth-child(2) { */
-/*   font-size: 40px; */
+/*   font-size: 30px; */
 /* } */
 
 /* .container div:nth-child(3) { */
-/*   font-size: 50px; */
+/*   font-size: 40px; */
 /* } */
 
 
