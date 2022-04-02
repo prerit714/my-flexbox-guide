@@ -1,12 +1,22 @@
+/*
+ * Contrary to flex-grow whose default value is 0,
+ * flex-shrink has default value to 1, which means
+ * that flex-items are by default allowed to shrink
+ * if there is not much space available.
+ * */
+
 .container {
   display: flex;
   border: 1px solid #fff;
   flex-flow: row;
+  width: 400px;
 }
 
 .container div {
-  width: 100px;
+  width: 200px;
   margin: 0;
+  /* flex-shrink: 1; /1* alpha *1/ */
+  flex-shrink: 0;
 }
 
 .container div:nth-child(1) {
@@ -15,7 +25,6 @@
 
 .container div:nth-child(2) {
   order: 0;
-  flex-grow: 1;
 }
 
 .container div:nth-child(3) {
