@@ -1,99 +1,21 @@
-/* Your code goes here */
-
-/*
- * Terminology that I will use
- * alpha: "Either add it or remove it, the page's UI will not change"
- * beta: "Adding it does not do anything at all"
- * */
-/* 
- * Make all containers to flex
- * 1. Default behaviour of display: flex is to fill row from left to right
- * 2. Main(x axis) Cross(y axis)
- * 3. Divide the whole container into two axis and then, align-items can
- *    can be used to put the align-items along the x and y axis
- * */
-/*
- * What I did this commit ?
- * Now to target the flex items inside the flex containers themselves,
- * Lower the order is, higher is its priority inside the flex-container
- * Order value can be used to implement "DragAndDrop", without using much
- * of JavaScript
- * */
-
-.container-1 {
-  /* Adding a border really helps you to see the container */
-  border: 1px solid #fff;
-  height: 200px; /* Define height of the container, the children will take the whole height by default */
-  width: 500px; /* Define the width of the container to check the overflow */
-  /* Do not remove any code from line above */
-  display: flex;
-  flex-direction: row; /* alpha */
-  /* flex-direction: row-reverse; */ 
-  /* flex-direction: column; */ 
-  /* flex-direction: column-reverse; */ 
-  /* float: right; /1* Moves the whole container to right instead of its children *1/ */
-  justify-content: flex-start; /* alpha */
-  /* justify-content: flex-end; */
-  /* justify-content: space-around; */
-  /* justify-content: space-between; /1* ( along the main axis )Removes the spaces between the start and at the end *1/ */
-  /* align-items: strech; /1* alpha *1/ */
-  /* align-items: flex-end; /1* below the x axis *1/ */
-  align-items: flex-start; /* above the x axis */
-  /* align-items: baseline; /1* along the x axis *1/ */
-  /* flex-wrap: nowrap; /1* alpha *1/ */
-  flex-wrap: wrap;
-  /* flex-wrap: wrap-reverse; */
-}
-
-.container-2 {
-  border: 1px solid #fff;
-  width: 500px;
-  display: flex;
-  /* The two properties below go along with each other, because
-   * of which there is a short hand to deal with them together */
-  /* flex-direction: row; */
-  /* flex-wrap: nowrap; */
-  /* Change code from below */
-  flex-flow: row wrap; /* 12 possible values */
-  /* width: 500px; */
-}
-
 .container {
   display: flex;
-  flex-flow: row wrap;
   border: 1px solid #fff;
-  height: 300px;
-  width: 500px;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-flow: row;
+  width: 800px;
 }
 
-
-.container div:nth-child(1) {
-  align-self: flex-end;
+.container div {
+  width: 100px;
+  margin: 0;
+  /* flex-grow: 0; /1* Meaning they will not grow by themselves *1/ */
+  flex-grow: 1; /* 1 means they will all grow by the same amount of pixels */
 }
 
 .container div:nth-child(2) {
-  align-self: stretch;
+  order: 0;
 }
 
 .container div:nth-child(3) {
-  align-self: baseline;
-}
-
-.container div:nth-child(4) {
-  align-self: stretch;
-}
-
-.container div:nth-child(5) {
-  align-self: flex-start;
-}
-
-
-.container div:nth-child(6) {
-  align-self: baseline;
-}
-
-.container div:nth-child(8) {
-  align-self: stretch;
+  order: 0;
 }
