@@ -23,11 +23,12 @@
 .container {
   /* Adding a border really helps you to see the container */
   border: 1px solid #fff;
-  height: 150px; /* Define height of the container, the children will take the whole height by default */
+  height: 200px; /* Define height of the container, the children will take the whole height by default */
+  width: 500px; /* Define the width of the container to check the overflow */
   /* Do not remove any code from line above */
   display: flex;
-  /* flex-direction: row; /1* alpha *1/ */
-  flex-direction: row-reverse; 
+  flex-direction: row; /* alpha */
+  /* flex-direction: row-reverse; */ 
   /* flex-direction: column; */ 
   /* flex-direction: column-reverse; */ 
   /* float: right; /1* Moves the whole container to right instead of its children *1/ */
@@ -37,16 +38,20 @@
   justify-content: space-between; /* ( along the main axis )Removes the spaces between the start and at the end */
   /* align-items: strech; /1* alpha *1/ */
   /* align-items: flex-end; /1* below the x axis *1/ */
-  /* align-items: flex-start; /1* above the x axis *1/ */
-  align-items: baseline; /* along the x axis */
+  align-items: flex-start; /* above the x axis */
+  /* align-items: baseline; /1* along the x axis *1/ */
 }
 
-.container div:nth-child(2) {
-  font-size: 40px;
+.container div {
+  float: right;
 }
 
-.container div:nth-child(3) {
-  font-size: 50px;
-}
+/* .container div:nth-child(2) { */
+/*   font-size: 40px; */
+/* } */
+
+/* .container div:nth-child(3) { */
+/*   font-size: 50px; */
+/* } */
 
 
