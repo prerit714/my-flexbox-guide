@@ -17,10 +17,13 @@
 
 /*
  * What I did this commit ?
- * Different ways to wrap your items inside the flex-container
+ * Align content will only work if you have more than one row
+ * Justify content and Align content both have the same values
+ * JustifyContent will work along the main axis(x), while the AlignItmes
+ * works along the cross axis (y)
  * */
 
-.container {
+.container-1 {
   /* Adding a border really helps you to see the container */
   border: 1px solid #fff;
   height: 200px; /* Define height of the container, the children will take the whole height by default */
@@ -43,6 +46,29 @@
   /* flex-wrap: nowrap; /1* alpha *1/ */
   flex-wrap: wrap;
   /* flex-wrap: wrap-reverse; */
+}
+
+.container-2 {
+  border: 1px solid #fff;
+  width: 500px;
+  display: flex;
+  /* The two properties below go along with each other, because
+   * of which there is a short hand to deal with them together */
+  /* flex-direction: row; */
+  /* flex-wrap: nowrap; */
+  /* Change code from below */
+  flex-flow: row wrap; /* 12 possible values */
+  /* width: 500px; */
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  border: 1px solid #fff;
+  height: 300px;
+  width: 500px;
+  justify-content: space-between;
+  align-content: space-between;
 }
 
 /* .container div:nth-child(2) { */
