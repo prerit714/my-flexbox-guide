@@ -16,9 +16,12 @@
 /*
  *
  * What I did this commit ?
- * I have moved all the children float right inside the container
- * That is container is on it's place and all the elements have moved
- * to the right of th page
+ * I found that using flex-box would be really powerful thing
+ * as I will not even be required to use other layouts
+ * For the main website I can use flex-direction as column
+ * and for the containers within, I can use the flex-direction as row
+ * for example: If I had to show some gallery items from left to right
+ * in such a way that they do not overflow, I can just use them insead
  *
  * */
 
@@ -28,10 +31,8 @@
   /* Do not remove any code from line above */
   display: flex;
   /* flex-direction: row; /1* alpha *1/ */
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */ 
+  /* flex-direction: column; */ 
+  flex-direction: column-reverse; 
   /* float: right; /1* Moves the whole container to right instead of its children *1/ */
-}
-
-.container div {
-  float: right;
 }
