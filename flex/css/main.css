@@ -8,15 +8,15 @@
 .container {
   display: flex;
   border: 1px solid #fff;
-  flex-flow: row;
-  width: 400px;
+  flex-direction: row;
+  width: 500px;
 }
 
 .container div {
-  width: 200px;
+  flex-basis: 100px;
+  flex-grow: 1;
   margin: 0;
   /* flex-shrink: 1; /1* alpha *1/ */
-  flex-shrink: 0;
 }
 
 .container div:nth-child(1) {
