@@ -1,20 +1,21 @@
-.grid {
+.vcenter {
   display: flex;
+  height: 150px;
+  border: 1px solid #fff;
+  align-items: center;
+  justify-content: center;
 }
 
-.cell {
-  flex: 1; /* 1 1 0% */
+p {
+  margin: 0;
 }
 
-.gutters {
-  margin: -10px 0 10px -10px;
+li {
+  list-style-type: none;
+  flex-basis: 25%;
 }
 
-.gutters > .cell {
-  padding: 10px 0 0 10px;
+nav {
+  width: 100%;
 }
 
-.cell > div {
-  padding: 10px;
-  height: 100%;
-}
