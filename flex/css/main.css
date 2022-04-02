@@ -1,21 +1,33 @@
-.vcenter {
+body {
   display: flex;
-  height: 150px;
-  border: 1px solid #fff;
-  align-items: center;
-  justify-content: center;
-}
-
-p {
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
 }
 
-li {
-  list-style-type: none;
-  flex-basis: 25%;
+#main {
+  display: flex;
+  flex-grow: 1;
 }
 
-nav {
-  width: 100%;
+#content {
+  flex: 4 1 0%;
 }
 
+#secondary {
+  order: -1;
+  flex: 1 1 0%;
+}
+
+#tertiary {
+  flex: 1 1 0%;
+}
+
+#header, #footer {
+  text-align: center;
+  padding: 20px;
+}
+
+#main * {
+  padding: 20px;
+}
