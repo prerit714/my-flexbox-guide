@@ -10,20 +10,20 @@
  * Make all containers to flex
  * 1. Default behaviour of display: flex is to fill row from left to right
  * 2. Main(x axis) Cross(y axis)
+ * 3. Divide the whole container into two axis and then, align-items can
+ *    can be used to put the align-items along the x and y axis
  * */
 
 
 /*
  * What I did this commit ?
- * This code will center your children inside a flex container
- * REMEMBER: I am defining properties of the container, not the 
- * items themselves, that is I tell a flex container to do stuff
- * not the children themselves
+ * All the possible values for the align items
  * */
 
 .container {
   /* Adding a border really helps you to see the container */
   border: 1px solid #fff;
+  height: 150px; /* Define height of the container, the children will take the whole height by default */
   /* Do not remove any code from line above */
   display: flex;
   /* flex-direction: row; /1* alpha *1/ */
@@ -33,5 +33,20 @@
   /* float: right; /1* Moves the whole container to right instead of its children *1/ */
   /* justify-content: flex-start; /1* alpha *1/ */
   /* justify-content: flex-end; */
-  justify-content: center; /* Centers children horizontally in a flex container*/
+  /* justify-content: space-around; */
+  justify-content: space-between; /* ( along the main axis )Removes the spaces between the start and at the end */
+  /* align-items: strech; /1* alpha *1/ */
+  /* align-items: flex-end; /1* below the x axis *1/ */
+  /* align-items: flex-start; /1* above the x axis *1/ */
+  align-items: baseline; /* along the x axis */
 }
+
+.container div:nth-child(2) {
+  font-size: 40px;
+}
+
+.container div:nth-child(3) {
+  font-size: 50px;
+}
+
+
