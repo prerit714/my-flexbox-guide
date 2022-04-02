@@ -3,6 +3,7 @@
 /*
  * Terminology that I will use
  * alpha: "Either add it or remove it, the page's UI will not change"
+ * beta: "Adding it does not do anything at all"
  * */
 
 /* 
@@ -11,7 +12,26 @@
  * 2. Main(x axis) Cross(y axis)
  * */
 
+
+/*
+ *
+ * What I did this commit ?
+ * I have moved all the children float right inside the container
+ * That is container is on it's place and all the elements have moved
+ * to the right of th page
+ *
+ * */
+
 .container {
+  /* Adding a border really helps you to see the container */
+  border: 1px solid #fff;
+  /* Do not remove any code from line above */
   display: flex;
-  flex-direction: row; /* alpha */
+  /* flex-direction: row; /1* alpha *1/ */
+  flex-direction: row-reverse;
+  /* float: right; /1* Moves the whole container to right instead of its children *1/ */
+}
+
+.container div {
+  float: right;
 }
