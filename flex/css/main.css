@@ -5,7 +5,6 @@
  * alpha: "Either add it or remove it, the page's UI will not change"
  * beta: "Adding it does not do anything at all"
  * */
-
 /* 
  * Make all containers to flex
  * 1. Default behaviour of display: flex is to fill row from left to right
@@ -13,8 +12,6 @@
  * 3. Divide the whole container into two axis and then, align-items can
  *    can be used to put the align-items along the x and y axis
  * */
-
-
 /*
  * What I did this commit ?
  * Now to target the flex items inside the flex containers themselves,
@@ -68,15 +65,35 @@
   height: 300px;
   width: 500px;
   justify-content: space-between;
-  align-content: space-between;
+  align-items: flex-start;
+}
+
+
+.container div:nth-child(1) {
+  align-self: flex-end;
 }
 
 .container div:nth-child(2) {
-  order: -1; /* alpha */
+  align-self: stretch;
 }
 
-/* .container div:nth-child(3) { */
-/*   font-size: 40px; */
-/* } */
+.container div:nth-child(3) {
+  align-self: baseline;
+}
+
+.container div:nth-child(4) {
+  align-self: stretch;
+}
+
+.container div:nth-child(5) {
+  align-self: flex-start;
+}
 
 
+.container div:nth-child(6) {
+  align-self: baseline;
+}
+
+.container div:nth-child(8) {
+  align-self: stretch;
+}
