@@ -1,0 +1,17 @@
+/* Your code goes here */
+
+/*
+ * Terminology that I will use
+ * alpha: "Either add it or remove it, the page's UI will not change"
+ * */
+
+/* 
+ * Make all containers to flex
+ * 1. Default behaviour of display: flex is to fill row from left to right
+ * 2. Main(x axis) Cross(y axis)
+ * */
+
+.container {
+  display: flex;
+  flex-direction: row; /* alpha */
+}
